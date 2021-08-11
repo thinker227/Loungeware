@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "jdllama_target_spr_noshots",
-    "path": "sprites/jdllama_target_spr_noshots/jdllama_target_spr_noshots.yy",
+    "name": "",
+    "path": "",
   },
   "solid": false,
   "visible": true,

@@ -1,2 +1,2 @@
-if (thinker_miniscraper_debug)
+if (TEST_MODE_ACTIVE)
 	draw_self();
