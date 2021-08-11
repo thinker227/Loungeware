@@ -325,6 +325,7 @@
     {"id":{"name":"obj_space_scooter_batgen","path":"objects/obj_space_scooter_batgen/obj_space_scooter_batgen.yy",},"order":17,},
     {"id":{"name":"makoren_conjurer_spr_screenflash","path":"sprites/makoren_conjurer_spr_screenflash/makoren_conjurer_spr_screenflash.yy",},"order":8,},
     {"id":{"name":"baku_mine_spr_torch","path":"sprites/baku_mine_spr_torch/baku_mine_spr_torch.yy",},"order":18,},
+    {"id":{"name":"thinker_miniscraper_scr_macros","path":"scripts/thinker_miniscraper_scr_macros/thinker_miniscraper_scr_macros.yy",},"order":0,},
     {"id":{"name":"mimpy_firealarm_spr_ash","path":"sprites/mimpy_firealarm_spr_ash/mimpy_firealarm_spr_ash.yy",},"order":2,},
     {"id":{"name":"n8fl_cheat_seat_player_spr","path":"sprites/n8fl_cheat_seat_player_spr/n8fl_cheat_seat_player_spr.yy",},"order":4,},
     {"id":{"name":"nahoo_carttypebeat_rMain","path":"rooms/nahoo_carttypebeat_rMain/nahoo_carttypebeat_rMain.yy",},"order":2,},

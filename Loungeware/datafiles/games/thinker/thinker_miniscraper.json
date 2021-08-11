@@ -8,8 +8,8 @@
     "creator_name": "thinker227",
     "prompt": "BUILD",
     "init_room": "thinker_miniscraper_rm_main",
-    "view_width": 480,
-    "view_height": 320,
+    "view_width": 192,
+    "view_height": 128,
     "time_seconds": 10,
     "music_track": false, // nullable, defaults to noone. Accepts: sound name or false
     "music_loops": true, // nullable, defaults to true
