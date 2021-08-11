@@ -14,15 +14,22 @@
   ],
   "layers": [
     {"assets":[
-        {"spriteId":{"name":"thinker_miniscraper_square_placeholder","path":"sprites/thinker_miniscraper_square_placeholder/thinker_miniscraper_square_placeholder.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":12.0,"scaleY":8.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"graphic_27A3A612","tags":[],"resourceType":"GMRSpriteGraphic",},
+        {"spriteId":{"name":"thinker_miniscraper_spr_square_placeholder","path":"sprites/thinker_miniscraper_spr_square_placeholder/thinker_miniscraper_spr_square_placeholder.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":12.0,"scaleY":8.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"graphic_27A3A612","tags":[],"resourceType":"GMRSpriteGraphic",},
       ],"visible":false,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"ast_measuring","tags":[],"resourceType":"GMRAssetLayer",},
-    {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"inst_main","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"spriteId":{"name":"thinker_miniscraper_placeholder_bg","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"bg_main","tags":[],"resourceType":"GMRBackgroundLayer",},
+    {"instances":[
+        {"properties":[],"isDnd":false,"objectId":{"name":"thinker_miniscraper_obj_collision","path":"objects/thinker_miniscraper_obj_collision/thinker_miniscraper_obj_collision.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":112.0,"resourceVersion":"1.0","name":"inst_773195DE","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"thinker_miniscraper_obj_manager","path":"objects/thinker_miniscraper_obj_manager/thinker_miniscraper_obj_manager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_5B9C457E","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"inst_collision","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"inst_main","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"spriteId":{"name":"thinker_miniscraper_spr_placeholder_bg","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"bg_main","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
   "creationCodeFile": "",
   "inheritCode": false,
-  "instanceCreationOrder": [],
+  "instanceCreationOrder": [
+    {"name":"inst_773195DE","path":"rooms/thinker_miniscraper_rm_main/thinker_miniscraper_rm_main.yy",},
+    {"name":"inst_5B9C457E","path":"rooms/thinker_miniscraper_rm_main/thinker_miniscraper_rm_main.yy",},
+  ],
   "inheritCreationOrder": false,
   "sequenceId": null,
   "roomSettings": {

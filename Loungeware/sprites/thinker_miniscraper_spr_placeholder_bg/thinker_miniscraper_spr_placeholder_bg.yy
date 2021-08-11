@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"LayerId":{"name":"10de0ca6-471c-4d13-8b30-023348a9b321","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"thinker_miniscraper_placeholder_bg","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"resourceVersion":"1.0","name":"5b4fe337-756d-4f36-8232-e1137f131fbf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"LayerId":{"name":"10de0ca6-471c-4d13-8b30-023348a9b321","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"thinker_miniscraper_spr_placeholder_bg","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"resourceVersion":"1.0","name":"5b4fe337-756d-4f36-8232-e1137f131fbf","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"thinker_miniscraper_placeholder_bg","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},
+    "spriteId": {"name":"thinker_miniscraper_spr_placeholder_bg","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"88244039-43c2-4e30-8a4e-30bca9a78bb5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"88244039-43c2-4e30-8a4e-30bca9a78bb5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b4fe337-756d-4f36-8232-e1137f131fbf","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"thinker_miniscraper_placeholder_bg","path":"sprites/thinker_miniscraper_placeholder_bg/thinker_miniscraper_placeholder_bg.yy",},
+    "parent": {"name":"thinker_miniscraper_spr_placeholder_bg","path":"sprites/thinker_miniscraper_spr_placeholder_bg/thinker_miniscraper_spr_placeholder_bg.yy",},
     "resourceVersion": "1.3",
-    "name": "thinker_miniscraper_placeholder_bg",
+    "name": "thinker_miniscraper_spr_placeholder_bg",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Microgames/thinker/miniscraper/sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "thinker_miniscraper_placeholder_bg",
+  "name": "thinker_miniscraper_spr_placeholder_bg",
   "tags": [],
   "resourceType": "GMSprite",
 }
