@@ -67,6 +67,7 @@
     {"id":{"name":"n8fl_ice_broom_player","path":"objects/n8fl_ice_broom_player/n8fl_ice_broom_player.yy",},"order":2,},
     {"id":{"name":"n8fl_ice_broom_puck","path":"objects/n8fl_ice_broom_puck/n8fl_ice_broom_puck.yy",},"order":3,},
     {"id":{"name":"katsaii_witchwanda_wand_sandwhich","path":"sprites/katsaii_witchwanda_wand_sandwhich/katsaii_witchwanda_wand_sandwhich.yy",},"order":4,},
+    {"id":{"name":"thinker_miniscraper_spr_dropshadow","path":"sprites/thinker_miniscraper_spr_dropshadow/thinker_miniscraper_spr_dropshadow.yy",},"order":3,},
     {"id":{"name":"n8fl_escape1_car2_spr","path":"sprites/n8fl_escape1_car2_spr/n8fl_escape1_car2_spr.yy",},"order":2,},
     {"id":{"name":"n8fl_cheat_seat_rm","path":"rooms/n8fl_cheat_seat_rm/n8fl_cheat_seat_rm.yy",},"order":0,},
     {"id":{"name":"tfg_collision_checkobj","path":"objects/tfg_collision_checkobj/tfg_collision_checkobj.yy",},"order":19,},
