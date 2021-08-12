@@ -7,6 +7,7 @@ function thinker_get_room_layers(){
 	for (var i = 0; i < array_length(layer_ids); i++) {
 		var current_id = layer_ids[i];
 		var current_name = layer_get_name(current_id);
-		variable_struct_set(layers, layer_name, current_name);
+		variable_struct_set(layers, current_name, current_id);
 	}
+	return layers;
 }
