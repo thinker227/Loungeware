@@ -4,7 +4,7 @@ function thinker_miniscraper_StateBuild() constructor {
 	
 	// The current build state
 	player_state = {
-		collumn: 6,
+		column: 6,
 	};
 	
 	
@@ -39,30 +39,30 @@ function thinker_miniscraper_StateBuild() constructor {
 	/// @func on_left_pressed()
 	/// @desc Function called when a left input is recieved
 	static on_left_pressed = function() {
-		move_collumn(-1);
+		move_column(-1);
 	}
 	
 	/// @func on_right_pressed()
 	/// @desc Function called when a right input is recieved
 	static on_right_pressed = function() {
-		move_collumn(1);
+		move_column(1);
 	}
 	
-	/// @func move_collumn(distance)
-	/// @desc Moves the current collumn by a specified distance
-	/// @arg {int} distance The distance to move the current collumn
-	static move_collumn = function(distance) {
-		var new_collumn = player_state.collumn + distance;
-		if (new_collumn < 0 || new_collumn >= thinker_miniscraper_collumn_count) {
-			on_collumn_move_outside();
+	/// @func move_column(distance)
+	/// @desc Moves the current column by a specified distance
+	/// @arg {int} distance The distance to move the current column
+	static move_column = function(distance) {
+		var new_column = player_state.column + distance;
+		if (new_column < 0 || new_column >= thinker_miniscraper_column_count) {
+			on_column_move_outside();
 		} else {
-			player_state.collumn = new_collumn;
+			player_state.column = new_column;
 		}
 	}
 	
-	/// @func on_collumn_move_outside()
-	/// @desc Function called when the collumn attempts to go outside its bounds
-	static on_collumn_move_outside = function() {
+	/// @func on_column_move_outside()
+	/// @desc Function called when the column attempts to go outside its bounds
+	static on_column_move_outside = function() {
 		
 	}
 	
