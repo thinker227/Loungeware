@@ -5,3 +5,4 @@
 
 #macro thinker_miniscraper_layers (global.__thinker_miniscraper_layers)
 #macro thinker_miniscraper_config (global.__thinker_miniscraper_game_config)
+#macro thinker_miniscraper_blocks (global.__thinker_miniscraper_blocks)
