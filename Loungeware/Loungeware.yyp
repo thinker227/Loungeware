@@ -472,6 +472,7 @@
     {"id":{"name":"katsaii_witchwanda_3","path":"sprites/katsaii_witchwanda_3/katsaii_witchwanda_3.yy",},"order":2,},
     {"id":{"name":"n8fl_reach_for_it_mister_proj_spr","path":"sprites/n8fl_reach_for_it_mister_proj_spr/n8fl_reach_for_it_mister_proj_spr.yy",},"order":12,},
     {"id":{"name":"makoren_conjurer_snd_powerup","path":"sounds/makoren_conjurer_snd_powerup/makoren_conjurer_snd_powerup.yy",},"order":7,},
+    {"id":{"name":"thinker_miniscraper_scr_world","path":"scripts/thinker_miniscraper_scr_world/thinker_miniscraper_scr_world.yy",},"order":2,},
     {"id":{"name":"n8fl_reach_for_it_mister_weed_spr","path":"sprites/n8fl_reach_for_it_mister_weed_spr/n8fl_reach_for_it_mister_weed_spr.yy",},"order":13,},
     {"id":{"name":"n8fl_penguin_blast_hit_oof2_snd","path":"sounds/n8fl_penguin_blast_hit_oof2_snd/n8fl_penguin_blast_hit_oof2_snd.yy",},"order":2,},
     {"id":{"name":"yosi_EFT_snd_win","path":"sounds/yosi_EFT_snd_win/yosi_EFT_snd_win.yy",},"order":18,},
@@ -769,7 +770,7 @@
     {"folderPath":"folders/Microgames/thinker/miniscraper/scripts.yy","order":2,"resourceVersion":"1.0","name":"scripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Microgames/thinker/miniscraper/objects.yy","order":4,"resourceVersion":"1.0","name":"objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Microgames/thinker/utility.yy","order":2,"resourceVersion":"1.0","name":"utility","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Microgames/thinker/miniscraper/scripts/states.yy","order":2,"resourceVersion":"1.0","name":"states","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Microgames/thinker/miniscraper/scripts/states.yy","order":3,"resourceVersion":"1.0","name":"states","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

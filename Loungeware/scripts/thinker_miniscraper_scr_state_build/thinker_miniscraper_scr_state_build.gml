@@ -1,7 +1,8 @@
 /// @func thinker_miniscraper_StateBuild()
 /// @desc Main build state
-function thinker_miniscraper_StateBuild() constructor {
+function thinker_miniscraper_StateBuild(world) constructor {
 	
+	self.world = world;
 	// The current build state
 	player_state = {
 		column: 6,
