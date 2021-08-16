@@ -200,36 +200,7 @@ larold_credits = [
 	"baku",
 	"baku",
 	"katsaii",
-	"nahoo",
-	"mimpy",
-	"mimpy",
-	"mimpy",
-	"baku",
-	"makoren",
-	"baku",
-	"panda",
-	"grace",
-	"J.D. LOWE & Grace",
-	"mimpy",
-	"baku",
-	"yellowafterlife",
-	"sam",
-	"a huge pancake",
-	"mrs L",
-	"sam",
-	"yellowafterlife",
-	"nomm",
-	"mar$hmellow",
-	"datzach",
-	"anti",
-	"amet",
-	"J.D. LOWE",
-	"nahoo",
-	"nahoo",
-	"baku",
-	"baku",
-	
-	
+	"nahoo"
 ];
 
 
