@@ -1,4 +1,4 @@
-function thinker_miniscraper_Block(width, height, sprite) {
+function thinker_miniscraper_Block(width, height, sprite) constructor {
 	self.width = width;
 	self.height = height;
 	self.sprite = sprite;
