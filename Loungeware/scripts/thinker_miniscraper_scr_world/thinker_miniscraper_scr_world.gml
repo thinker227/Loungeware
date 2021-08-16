@@ -8,11 +8,32 @@ function thinker_miniscraper_World(world_room) {
 	
 	
 	
-	/// @func add_block(block)
-	/// @desc Adds a block to the world
-	/// @arg {instance_or_struct} The block to add, either an instance or a struct, must have a y-value
-	static add_block = function(block) {
-		array_push(blocks, block);
+	/// @func create_block(block, x, y)
+	/// @desc Creates a specified block in the world
+	/// @arg {thinker_miniscraper_Block} block The block to add, an thinker_miniscraper_Block instance representing the block to add
+	/// @arg {real} x The x position to create the block at
+	/// @arg {real} y The y position to create the block at
+	static create_block = function(block, x, y) {
+		var inst = instance_create_layer(
+			x, y, thinker_miniscraper_layers[$ "inst_blocks"],
+			thinker_miniscraper_obj_block
+		);
+		with (inst) {
+			self.sprite = block.sprite;
+			self.block = block;
+		}
+		array_push(blocks, inst);
+		
+		var collision = instance_create_layer(
+			x, y, thinker_miniscraper_layers[$ "inst_block_collision"],
+			thinker_miniscraper_obj_collision
+		);
+		var x_scale = block.width / sprite_get_width(thinker_miniscraper_spr_collision_debug);
+		var y_scale = block.height / sprite_get_height(thinker_miniscraper_spr_collision_debug);
+		collision.image_xscale = x_scale;
+		collision.image_yscale = y_scale;
+		
+		return inst;
 	}
 	
 	/// @func get_blocks()

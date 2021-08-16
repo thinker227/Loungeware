@@ -121,7 +121,7 @@ function thinker_miniscraper_StateBuild(world) constructor {
 		var selected_block = get_selected_block();
 		var drop_x = player_state.column * thinker_miniscraper_grid_size;
 		var drop_y = get_drop_y(drop_x, selected_block);
-		
+		world.create_block(selected_block, drop_x, drop_y);
 	}
 	
 }
