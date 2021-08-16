@@ -6,6 +6,7 @@ function thinker_miniscraper_StateBuild(world) constructor {
 	// The current build state
 	player_state = {
 		column: 6,
+		selected_block_index: 0,
 	};
 	
 	
@@ -15,6 +16,8 @@ function thinker_miniscraper_StateBuild(world) constructor {
 	static update = function() {
 		if (KEY_LEFT_PRESSED) on_left_pressed();
 		if (KEY_RIGHT_PRESSED) on_right_pressed();
+		if (KEY_UP_PRESSED) on_up_pressed();
+		if (KEY_DOWN_PRESSED) on_down_pressed();
 		if (KEY_PRIMARY_PRESSED) on_primary_pressed();
 	}
 	
@@ -66,10 +69,58 @@ function thinker_miniscraper_StateBuild(world) constructor {
 	static on_column_move_outside = function() {
 		
 	}
+		
+	/// @func on_up_pressed()
+	/// @desc Function called when an up input is recieved
+	static on_up_pressed = function() {
+		change_selected_block_index(1);
+	}
+	
+	/// @func on_down_pressed()
+	/// @desc Function called when a down input is recieved
+	static on_down_pressed = function() {
+		change_selected_block_index(-1);
+	}
+	
+	/// @func change_selected_block_index(distance)
+	/// @desc Changes the index of the currently selected block by a specified distance
+	/// @arg {int} distance The distance to change the index by
+	static change_selected_block_index = function(distance) {
+		var block_count = array_length(thinker_miniscraper_blocks);
+		var new_index = player_state.selected_block_index + distance;
+		
+		if (new_index < 0) new_index = block_count - 1;
+		if (new_index >= block_count) new_index = 0;
+		
+		player_state.selected_block_index = new_index;
+	}
 	
 	/// @func on_primary_pressed()
 	/// @desc Function called when a primary input is recieved
 	static on_primary_pressed = function() {
+		create_block();
+	}
+	
+	/// @func get_selected_block()
+	/// @desc Gets the current selected block based on the current selected index
+	static get_selected_block = function() {
+		return thinker_miniscraper_blocks[player_state.selected_block_index];
+	}
+	
+	/// @func get_drop_y(drop_x, block)
+	/// @desc Gets the y position to drop a block at based on a specified x position and the block to drop
+	/// @arg {real} drop_x The x position to drop the block at
+	/// @arg {thinker_miniscraper_Block} block The block to drop
+	static get_drop_y = function(drop_x, block) {
+		
+	}
+	
+	/// @func create_block()
+	/// @desc Creates a block based on the current player state
+	static create_block = function() {
+		var selected_block = get_selected_block();
+		var drop_x = player_state.column * thinker_miniscraper_grid_size;
+		var drop_y = get_drop_y(drop_x, selected_block);
 		
 	}
 	
