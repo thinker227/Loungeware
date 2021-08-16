@@ -1,6 +1,6 @@
 /// @func thinker_miniscraper_World(world_room)
 /// @desc Provides functionality for a world
-function thinker_miniscraper_World(world_room) {
+function thinker_miniscraper_World(world_room) constructor {
 	
 	blocks = [];
 	water_level = 0;
@@ -15,7 +15,7 @@ function thinker_miniscraper_World(world_room) {
 	/// @arg {real} y The y position to create the block at
 	static create_block = function(block, x, y) {
 		var inst = instance_create_layer(
-			x, y, thinker_miniscraper_layers[$ "inst_blocks"],
+			x, y, thinker_miniscraper_layer_blocks,
 			thinker_miniscraper_obj_block
 		);
 		with (inst) {
@@ -25,13 +25,15 @@ function thinker_miniscraper_World(world_room) {
 		array_push(blocks, inst);
 		
 		var collision = instance_create_layer(
-			x, y, thinker_miniscraper_layers[$ "inst_block_collision"],
+			x, y, thinker_miniscraper_layer_block_collision,
 			thinker_miniscraper_obj_collision
 		);
 		var x_scale = block.width / sprite_get_width(thinker_miniscraper_spr_collision_debug);
 		var y_scale = block.height / sprite_get_height(thinker_miniscraper_spr_collision_debug);
-		collision.image_xscale = x_scale;
-		collision.image_yscale = y_scale;
+		with (collision) {
+			image_xscale = x_scale;
+			image_yscale = y_scale;
+		}
 		
 		return inst;
 	}
