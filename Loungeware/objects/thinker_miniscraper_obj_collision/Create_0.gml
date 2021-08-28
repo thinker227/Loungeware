@@ -1,3 +1,5 @@
+sprite = thinker_miniscraper_spr_collision_pixel;
+
 width = 0;
 height = 0;
 debug_sprite_xscale = 0;

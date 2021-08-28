@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "thinker_miniscraper_spr_collision_pixel",
-    "path": "sprites/thinker_miniscraper_spr_collision_pixel/thinker_miniscraper_spr_collision_pixel.yy",
+    "name": "thinker_miniscraper_spr_collision_debug",
+    "path": "sprites/thinker_miniscraper_spr_collision_debug/thinker_miniscraper_spr_collision_debug.yy",
   },
   "solid": false,
   "visible": true,
