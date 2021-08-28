@@ -15,13 +15,16 @@ function thinker_miniscraper_colliding_list(x1, y1, x2, y2, collision_layer) {
 		collision_list, false
 	);
 	
-	var iterator = new thinker_ListIterator(collision_list);
-	while (iterator.next()) {
-		var current = iterator.current();
-		if (current.layer == collision_layer)
-			array_push(collision_instances, current);
+	if (ds_list_size(collision_list) > 0) {
+		if (is_string(collision_layer)) collision_layer = layer_get_id(collision_layer);
+		var iterator = new thinker_ListIterator(collision_list);
+		while (iterator.next()) {
+			var current = iterator.current();
+			if (current.layer == collision_layer)
+				array_push(collision_instances, current);
+		}
+		iterator.destroy();
 	}
-	iterator.destroy();
 	
 	ds_list_destroy(collision_list);
 	return collision_instances;
@@ -35,6 +38,8 @@ function thinker_miniscraper_colliding_list(x1, y1, x2, y2, collision_layer) {
 /// @arg {real} y2 The bottom position of the rectangle to get collision inside
 /// @arg {layer_id} collision_layer The layer on which to get collision
 function thinker_miniscraper_colliding_any(x1, y1, x2, y2, collision_layer) {
+	var success = false;
+	
 	var collision_list = ds_list_create();
 	collision_rectangle_list(
 		x1, y1, x2, y2,
@@ -42,14 +47,16 @@ function thinker_miniscraper_colliding_any(x1, y1, x2, y2, collision_layer) {
 		collision_list, false
 	);
 	
-	var success = false;
-	var iterator = new thinker_ListIterator(collision_list);
-	while (!success && iterator.next()) {
-		var current = iterator.current();
-		if (current.layer == collision_layer)
-			success = true;
+	if (ds_list_size(collision_list) > 0) {
+		if (is_string(collision_layer)) collision_layer = layer_get_id(collision_layer);
+		var iterator = new thinker_ListIterator(collision_list);
+		while (!success && iterator.next()) {
+			var current = iterator.get_current();
+			if (current.layer == collision_layer)
+				success = true;
+		}
+		iterator.destroy();
 	}
-	iterator.destroy();
 	
 	ds_list_destroy(collision_list);
 	return success;

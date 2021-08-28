@@ -87,8 +87,8 @@ function thinker_miniscraper_World(world_room) constructor {
 	/// @arg {real} y The y position to check for collision at
 	/// @arg {thinker_miniscraper_Block} block The block of which size to use to check for collisions
 	static check_collision = function(x, y, block) {
-		var x2 = x + block.block.width;
-		var y2 = y + block.block.height;
+		var x2 = x + block.width;
+		var y2 = y + block.height;
 		
 		return thinker_miniscraper_colliding_any(x, y, x2, y2, thinker_miniscraper_layer_block_collision)
 	}

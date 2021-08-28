@@ -24,19 +24,21 @@ function thinker_miniscraper_StateBuild(world) constructor {
 	/// @func draw()
 	/// @desc Draws the state
 	static draw = function() {
-		
+		draw_dropshadow();
 	}
 	
-	/// @func draw_dropshadow(x, y, width, height)
+	/// @func draw_dropshadow()
 	/// @desc Draws a dropshadow at a specified position
-	/// @arg {real} x The x position to draw the dropshadow at.
-	/// @arg {real} y The y position to draw the dropshadow at.
-	/// @arg {real} width The width of the dropshadow.
-	/// @arg {real} height The height of the dropshadow.
-	static draw_dropshadow = function(x, y, width, height) {
+	static draw_dropshadow = function() {
+		var selected_block = get_selected_block();
+		var drop_x = get_drop_x();
+		var drop_y = get_drop_y();
+		var width = selected_block.width;
+		var height = selected_block.height;
+		
 		draw_sprite_stretched(
 			thinker_miniscraper_spr_dropshadow, 0,
-			x, y, width, height
+			drop_x, drop_y, width, height
 		);
 	}
 	
@@ -107,20 +109,37 @@ function thinker_miniscraper_StateBuild(world) constructor {
 		return thinker_miniscraper_blocks[player_state.selected_block_index];
 	}
 	
+	/// @func get_drop_x()
+	/// @desc Gets the x position to drop a block at
+	static get_drop_x = function() {
+		return player_state.column * thinker_miniscraper_grid_size;
+	}
+	
 	/// @func get_drop_y(drop_x, block)
-	/// @desc Gets the y position to drop a block at based on a specified x position and the block to drop
-	/// @arg {real} drop_x The x position to drop the block at
-	/// @arg {thinker_miniscraper_Block} block The block to drop
-	static get_drop_y = function(drop_x, block) {
+	/// @desc Gets the y position to drop a block at
+	static get_drop_y = function() {
+		var selected_block = get_selected_block();
+		var drop_x = get_drop_x();
+		var drop_y = -selected_block.height;
 		
+		var y_max = room_height - selected_block.height;
+		
+		while (
+			drop_y < y_max &&
+			!world.check_collision(drop_x, drop_y, selected_block)
+		) {
+			drop_y += 1;
+		}
+		
+		return drop_y;
 	}
 	
 	/// @func create_block()
 	/// @desc Creates a block based on the current player state
 	static create_block = function() {
 		var selected_block = get_selected_block();
-		var drop_x = player_state.column * thinker_miniscraper_grid_size;
-		var drop_y = get_drop_y(drop_x, selected_block);
+		var drop_x = get_drop_x();
+		var drop_y = get_drop_y();
 		world.create_block(selected_block, drop_x, drop_y);
 	}
 	
