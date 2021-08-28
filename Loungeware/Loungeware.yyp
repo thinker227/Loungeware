@@ -432,7 +432,6 @@
     {"id":{"name":"n8fl_reach_for_it_mister_btn_prompt_spr","path":"sprites/n8fl_reach_for_it_mister_btn_prompt_spr/n8fl_reach_for_it_mister_btn_prompt_spr.yy",},"order":2,},
     {"id":{"name":"thinker_miniscraper_scr_blocks","path":"scripts/thinker_miniscraper_scr_blocks/thinker_miniscraper_scr_blocks.yy",},"order":3,},
     {"id":{"name":"n8fl_cheat_seat_player","path":"objects/n8fl_cheat_seat_player/n8fl_cheat_seat_player.yy",},"order":6,},
-    {"id":{"name":"thinker_scr_get_layers","path":"scripts/thinker_scr_get_layers/thinker_scr_get_layers.yy",},"order":0,},
     {"id":{"name":"n8fl_cheat_seat_progress_letters_spr","path":"sprites/n8fl_cheat_seat_progress_letters_spr/n8fl_cheat_seat_progress_letters_spr.yy",},"order":8,},
     {"id":{"name":"n8fl_reach_for_it_mister_cbulbs_spr","path":"sprites/n8fl_reach_for_it_mister_cbulbs_spr/n8fl_reach_for_it_mister_cbulbs_spr.yy",},"order":3,},
     {"id":{"name":"baku_chug_obj_smoke","path":"objects/baku_chug_obj_smoke/baku_chug_obj_smoke.yy",},"order":1,},
