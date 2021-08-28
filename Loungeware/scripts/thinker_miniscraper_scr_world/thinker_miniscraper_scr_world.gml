@@ -69,6 +69,30 @@ function thinker_miniscraper_World(world_room) constructor {
 		return highest;
 	}
 	
+	/// @func get_collision(x, y, block)
+	/// @desc Gets whether any collision is found at a specified position using the size of a specified block and return the instance that collision was found with or noone
+	/// @arg {real} x The x position to check for collision at
+	/// @arg {real} y The y position to check for collision at
+	/// @arg {thinker_miniscraper_Block} block The block of which size to use to check for collisions
+	static get_collision = function(x, y, block) {
+		var x2 = x + block.block.width;
+		var y2 = y + block.block.height;
+		
+		return thinker_miniscraper_colliding_list(x, y, x2, y2, thinker_miniscraper_layer_block_collision);
+	}
+	
+	/// @func check_collision(x, y, block)
+	/// @desc Returns whether any collision is found at a specified position using the size of a specified block
+	/// @arg {real} x The x position to check for collision at
+	/// @arg {real} y The y position to check for collision at
+	/// @arg {thinker_miniscraper_Block} block The block of which size to use to check for collisions
+	static check_collision = function(x, y, block) {
+		var x2 = x + block.block.width;
+		var y2 = y + block.block.height;
+		
+		return thinker_miniscraper_colliding_any(x, y, x2, y2, thinker_miniscraper_layer_block_collision)
+	}
+	
 	/// @func set_water_level(value)
 	/// @desc Sets the water level to a percise value
 	/// @arg {real} value The value to set the water level to

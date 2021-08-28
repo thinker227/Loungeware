@@ -1,41 +1,55 @@
-/// @func thinker_miniscraper_colliding_list(x, y, collision_layer)
-/// @desc Gets an array of collision instances at a specified position on a specified layer
-/// @arg {real} x The x position to get the instances at
-/// @arg {real} y The y position to get the instances at
+/// @func thinker_miniscraper_colliding_list(x1, y1, x2, y2, collision_layer)
+/// @desc Gets an array of collision instances within a specified rectangle on a specified layer
+/// @arg {real} x1 The left position of the rectangle to get the instances inside
+/// @arg {real} y1 The top position of the rectangle to get the instances inside
+/// @arg {real} x2 The right position of the rectangle to get the instances inside
+/// @arg {real} y2 The bottom position of the rectangle to get the instances inside
 /// @arg {layer_id} collision_layer The layer on which to get the instances
-function thinker_miniscraper_colliding_list(x, y, collision_layer) {
+function thinker_miniscraper_colliding_list(x1, y1, x2, y2, collision_layer) {
 	var collision_instances = [];
 	
 	var collision_list = ds_list_create();
-	instance_position_list(x, y, thinker_miniscraper_obj_collision, collision_list, false);
+	collision_rectangle_list(
+		x1, y1, x2, y2,
+		thinker_miniscraper_obj_collision, false, false,
+		collision_list, false
+	);
 	
-	for (var i = 0; i < ds_list_size(collision_list); i++) {
-		var current = collision_list[| i];
+	var iterator = new thinker_ListIterator(collision_list);
+	while (iterator.next()) {
+		var current = iterator.current();
 		if (current.layer == collision_layer)
 			array_push(collision_instances, current);
 	}
+	iterator.destroy();
 	
 	ds_list_destroy(collision_list);
 	return collision_instances;
 }
 
 /// @func thinker_miniscraper_colliding_any(x, y, collision_layer)
-/// @desc Gets whether any collision is found at a specified position on a specified layer
-/// @arg {real} x The x position to get collision at
-/// @arg {real} y The y position to get collision at
+/// @desc Gets whether any collision is found within a specified rectangle on a specified layer
+/// @arg {real} x1 The left position of the rectangle to get collision inside
+/// @arg {real} y1 The top position of the rectangle to get collision inside
+/// @arg {real} x2 The right position of the rectangle to get collision inside
+/// @arg {real} y2 The bottom position of the rectangle to get collision inside
 /// @arg {layer_id} collision_layer The layer on which to get collision
-function thinker_miniscraper_colliding_any(x, y, collision_layer) {
+function thinker_miniscraper_colliding_any(x1, y1, x2, y2, collision_layer) {
 	var collision_list = ds_list_create();
-	instance_position_list(x, y, thinker_miniscraper_obj_collision, collision_list, false);
+	collision_rectangle_list(
+		x1, y1, x2, y2,
+		thinker_miniscraper_obj_collision, false, false,
+		collision_list, false
+	);
 	
 	var success = false;
-	for (var i = 0; i < ds_list_size(collision_list); i++) {
-		var current = collision_list[| i];
-		if (current.layer == collision_layer) {
+	var iterator = new thinker_ListIterator(collision_list);
+	while (!success && iterator.next()) {
+		var current = iterator.current();
+		if (current.layer == collision_layer)
 			success = true;
-			break;
-		}
 	}
+	iterator.destroy();
 	
 	ds_list_destroy(collision_list);
 	return success;
