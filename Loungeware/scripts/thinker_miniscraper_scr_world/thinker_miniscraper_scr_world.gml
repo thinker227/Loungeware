@@ -50,13 +50,19 @@ function thinker_miniscraper_World(world_room) constructor {
 		return blocks[get_blocks_count() - 1];
 	}
 	
+	/// @func get_block_iterator()
+	/// @desc Gets a thinker_ArrayIterator which iterates through the blocks in the world
+	static get_block_iterator = function() {
+		return new thinker_ArrayIterator(blocks);
+	}
+	
 	/// @func get_highest_block_position()
 	/// @desc Gets the y-position of the block with the highest y-position
 	static get_highest_block_position = function() {
-		var block_count = get_blocks_count();
 		var highest = infinity;
-		for (var i = 0; i < block_count; i++) {
-			var current = blocks[i];
+		var iterator = get_block_iterator();
+		while (iterator.next()) {
+			var current = iterator.get_current();
 			var current_y = current.y;
 			if (current_y < highest) highest = current_y;
 		}
