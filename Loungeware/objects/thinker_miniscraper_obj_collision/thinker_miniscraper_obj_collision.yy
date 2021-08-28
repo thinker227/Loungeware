@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "thinker_miniscraper_spr_collision_debug",
-    "path": "sprites/thinker_miniscraper_spr_collision_debug/thinker_miniscraper_spr_collision_debug.yy",
+    "name": "thinker_miniscraper_spr_collision_pixel",
+    "path": "sprites/thinker_miniscraper_spr_collision_pixel/thinker_miniscraper_spr_collision_pixel.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,6 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

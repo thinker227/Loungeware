@@ -18,22 +18,14 @@ function thinker_miniscraper_World(world_room) constructor {
 			x, y, thinker_miniscraper_layer_blocks,
 			thinker_miniscraper_obj_block
 		);
-		with (inst) {
-			self.sprite = block.sprite;
-			self.block = block;
-		}
+		inst.set_block(block);
 		array_push(blocks, inst);
 		
 		var collision = instance_create_layer(
 			x, y, thinker_miniscraper_layer_block_collision,
 			thinker_miniscraper_obj_collision
 		);
-		var x_scale = block.width / sprite_get_width(thinker_miniscraper_spr_collision_debug);
-		var y_scale = block.height / sprite_get_height(thinker_miniscraper_spr_collision_debug);
-		with (collision) {
-			image_xscale = x_scale;
-			image_yscale = y_scale;
-		}
+		collision.set_size(block.width, block.height);
 		
 		return inst;
 	}

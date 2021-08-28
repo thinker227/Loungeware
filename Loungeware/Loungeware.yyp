@@ -110,6 +110,7 @@
     {"id":{"name":"jdllama_target_snd_shot_good","path":"sounds/jdllama_target_snd_shot_good/jdllama_target_snd_shot_good.yy",},"order":0,},
     {"id":{"name":"space_scooter_snd_squeak","path":"sounds/space_scooter_snd_squeak/space_scooter_snd_squeak.yy",},"order":2,},
     {"id":{"name":"space_scooter_spr_crash_rabbit","path":"sprites/space_scooter_spr_crash_rabbit/space_scooter_spr_crash_rabbit.yy",},"order":11,},
+    {"id":{"name":"thinker_miniscraper_spr_collision_pixel","path":"sprites/thinker_miniscraper_spr_collision_pixel/thinker_miniscraper_spr_collision_pixel.yy",},"order":4,},
     {"id":{"name":"n8fl_escape1_car_start","path":"objects/n8fl_escape1_car_start/n8fl_escape1_car_start.yy",},"order":6,},
     {"id":{"name":"n8fl_reach_for_it_mister_hud","path":"objects/n8fl_reach_for_it_mister_hud/n8fl_reach_for_it_mister_hud.yy",},"order":4,},
     {"id":{"name":"baku_mine_spr_ember","path":"sprites/baku_mine_spr_ember/baku_mine_spr_ember.yy",},"order":6,},
